@@ -42,7 +42,7 @@ server.listen(process.env.APP_PORT, err => {
 
   📚   Check the API documentation at http://localhost:${process.env.APP_PORT}
 
-  Server listening on port ${process.env.APP_PORT}...
+  Server listening in ${process.env.NODE_ENV.toUpperCase()} mode on port ${process.env.APP_PORT}...
   `)
 })
 
