@@ -8,7 +8,7 @@
 
 ### Requirements
 
-* Node.js 7.6.0 or higher
+* Node.js 7.6.0+
 * MySQL
 
 ### Dependencies
