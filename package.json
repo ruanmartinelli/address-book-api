@@ -11,8 +11,8 @@
     "test:watch": "NODE_ENV=test ava test/index.js --verbose --watch",
     "dev":
       "NODE_ENV=development ./node_modules/.bin/nodemon index.js --ignore docs/",
-    "lint": "./node_modules/.bin/standard",
-    "lint:fix": "./node_modules/.bin/standard --fix",
+    "lint": "./node_modules/.bin/standard src/**",
+    "lint:fix": "./node_modules/.bin/standard  src/** --fix",
     "docs": "./node_modules/.bin/apidoc -i src/ -o docs",
     "docs:serve": "npm run docs && npm run dev"
   },
