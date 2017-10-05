@@ -13,9 +13,8 @@ function authMiddleware (req, res, next) {
   jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
     if (err) return next(err)
 
-    // User context is stored on res.locals
-    // so things like ths user id, email, etc. can
-    // be accessed on controllers
+    // User context is stored on res.locals so things like
+    // the user id, email, etc. can be accessed on controllers
     res.locals = decoded
 
     next()

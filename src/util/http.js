@@ -2,13 +2,14 @@ import { isEmpty, extend } from 'lodash'
 
 /**
  * Wrapper for API functions called via an HTTP request.
- * Abstracts expressjs req and res objects and makes controllers reusable.
+ * Abstracts ExpressJS req and res objects so controllers can be reused.
  *
  * @param {Function} apiMethod API method to call
  * @return {Function} middleware format function to call on a matching request
  */
 export default function http (apiMethod) {
   return function apiHandler (req, res, next) {
+
     // Merge req.query, req.params and res.locals on a single object
     let options = extend({}, req.query, req.params, { context: res.locals })
     let object = req.body

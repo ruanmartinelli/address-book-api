@@ -20,7 +20,7 @@ async function addUser (user, options) {
     throw error.validation('User already exists')
   }
 
-  // Hash user password
+  // Hashes user password
   user.password = await scrypt.hash(user.password)
 
   return userModel.addUser(user)
