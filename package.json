@@ -6,7 +6,7 @@
   "main": "index.js",
   "author": "Ruan Martinelli <martinelliruan@gmail.com>",
   "scripts": {
-    "start": "npm run docs && NODE_ENV=production node index.js",
+    "start": "NODE_ENV=production node index.js",
     "test": "npm run lint:fix && NODE_ENV=test ava test/index.js --verbose",
     "test:watch": "NODE_ENV=test ava test/index.js --verbose --watch",
     "dev":
