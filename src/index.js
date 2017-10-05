@@ -13,6 +13,7 @@ import { initFirebase } from 'util/firebase'
 checkEnvVars()
 
 const server = express()
+const port = process.env.PORT || process.env.APP_PORT
 
 server.use(cors())
 server.use(bodyParser.json())
@@ -32,7 +33,7 @@ server.use(errorHandlers.unauthorizedError)
 server.use(errorHandlers.forbiddenError)
 server.use(errorHandlers.serverError)
 
-server.listen(process.env.APP_PORT, err => {
+server.listen(port, err => {
   if (err) throw err
 
   console.log(`
@@ -40,9 +41,9 @@ server.listen(process.env.APP_PORT, err => {
 
   👨   Author: Ruan Martinelli <martinelliruan@gmail.com>
 
-  📚   Check the API documentation at http://localhost:${process.env.APP_PORT}
+  📚   Check the API documentation at http://localhost:${port}
 
-  Server listening in ${process.env.NODE_ENV.toUpperCase()} mode on port ${process.env.APP_PORT}...
+  Server listening in ${process.env.NODE_ENV.toUpperCase()} mode on port ${port}...
   `)
 })
 
