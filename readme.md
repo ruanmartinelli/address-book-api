@@ -1,19 +1,10 @@
-[express-url]: https://github.com/expressjs/express
-[knex-url]: http://knexjs.org/
-[ava-url]: https://github.com/avajs
-[babel-url]: https://babeljs.io
-[firebase-url]: https://github.com/firebase/firebase-js-sdk
-[joi-url]:https://github.com/hapijs/joi
-[jwt-url]: https://jwt.io/
-[docs-url]:https://api-address-book.herokuapp.com/
-
 # Address Book API
 
 <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
 
 > An Address Book back-end API
 
-:books: [See Documentation](docs-url)
+:books: [See Documentation](https://api-address-book.herokuapp.com/)
 
 ### Requirements
 
@@ -22,13 +13,13 @@
 
 ### Dependencies
 
-* [Express][express-url] web framework
-* [Knex](knex-url) SQL query builder
-* [Ava](ava-url) for concurrent tests
-* [Babel](babel-url) JS transpiler
-* [Firebase](firebase-url) Firebase JS SKD
-* [Joi](firebase-url) schema validator
-* [JWT](jwt-url) for stateless authentication
+* [Express](https://github.com/expressjs/express) web framework
+* [Knex](http://knexjs.org/) SQL query builder
+* [Ava](https://github.com/avajs) for concurrent tests
+* [Babel](https://babeljs.io) JS transpiler
+* [Firebase](https://github.com/firebase/firebase-js-sdk) Firebase JS SKD
+* [Joi](https://github.com/hapijs/joi) schema validator
+* [JWT](https://jwt.io/) for stateless authentication
 
 ### Folder structure
 
