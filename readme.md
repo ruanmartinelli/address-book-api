@@ -54,10 +54,10 @@ cd <NEW_NAME>
 mv .env.example .env
 ```
 
-3. Create the database:
+3. Migrate the database:
 
 ```bash
-# See src/script/db.sql
+npm run db:latest
 ```
 
 4. Run
@@ -69,6 +69,9 @@ npm run dev
 ### npm Scripts
 
 Start the server in Production mode:
+
+*Also migrates the database.*
+
 ```bash
 npm start 
 ```
@@ -101,6 +104,11 @@ npm run test:watch
 Generate API documentation:
 ```bash
 npm run docs
+```
+
+Migrate the database:
+```bash
+npm run db:latest
 ```
 
 ### License
