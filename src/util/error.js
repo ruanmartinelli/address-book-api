@@ -14,11 +14,11 @@ function unauthorized (message) {
   }
 }
 
-function forbidden () {
+function forbidden (message) {
   return {
     status: 403,
     success: false,
-    message: `Sorry, you don't have access to perform this action`
+    message: message || `Sorry, you don't have access to perform this action`
   }
 }
 
