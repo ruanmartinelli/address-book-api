@@ -7,8 +7,10 @@ import userController from 'app/user/user-controller'
 
 const { JWT_EXPIRES_IN, JWT_SECRET } = process.env
 
-async function login ({ email, password }) {
-  const user = await userController.getUsers({ email }).then(_.head)
+async function login({ email, password }) {
+  const user = await userController
+    .getUsers({ email, withPassword: true })
+    .then(_.head)
 
   if (!user) throw error.unauthorized('User not found')
 

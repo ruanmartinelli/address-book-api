@@ -12,11 +12,13 @@ const UserSchema = Joi.object({
   email: Joi.string().email().max(255).required(),
   name: Joi.string().max(255).required(),
   username: Joi.string().min(3).max(30).required(),
-  password: Joi.string().max(255).required()
+  password: Joi.string().max(255)
 })
 
 function getUsers (filter) {
-  const columns = ['id', 'email', 'name', 'username', 'password']
+  const columns = ['id', 'email', 'name', 'username']
+
+  if(filter.withPassword) columns.push('password')
 
   const query = qb
     .select(columns)
