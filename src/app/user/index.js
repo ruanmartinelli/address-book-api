@@ -2,29 +2,8 @@ import http from 'util/http'
 import userController from './user-controller'
 
 function initPrivate (app) {
-  /**
-   * @api {get} /api/user/:id Get user
-   * @apiName  GetUser
-   * @apiGroup Users
-   * @apiVersion  0.1.0
-   *
-   * @apiHeader {String} Authorization Auth token
-   *
-   * @apiParam (Url params) {Number} id The user ID
-   *
-   * @apiSuccessExample {json} Success-Response:
-   *     HTTP/1.1 200 OK
-   *     {
-   *       "id": 652,
-   *       "email": "daenerys@dragonclub.com",
-   *       "name": "Daenerys"
-   *       "username": "mother_of_dragons14"
-   *     }
-   *
-   */
-  app.get('/api/user/:id', http(userController.getUser))
 
-  /**
+   /**
    * @api {get} /api/user Get users
    * @apiName  GetUsers
    * @apiGroup Users
@@ -54,6 +33,28 @@ function initPrivate (app) {
    *
    */
   app.get('/api/user/', http(userController.getUsers))
+
+  /**
+   * @api {get} /api/user/:id Get user
+   * @apiName  GetUser
+   * @apiGroup Users
+   * @apiVersion  0.1.0
+   *
+   * @apiHeader {String} Authorization Auth token
+   *
+   * @apiParam (Url params) {Number} id The user ID
+   *
+   * @apiSuccessExample {json} Success-Response:
+   *     HTTP/1.1 200 OK
+   *     {
+   *       "id": 652,
+   *       "email": "daenerys@dragonclub.com",
+   *       "name": "Daenerys"
+   *       "username": "mother_of_dragons14"
+   *     }
+   *
+   */
+  app.get('/api/user/:id', http(userController.getUser))
 
   /**
    * @api {put} /api/user Update user
