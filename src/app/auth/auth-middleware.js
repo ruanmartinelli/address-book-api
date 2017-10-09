@@ -12,7 +12,7 @@ function authMiddleware (req, res, next) {
   if (!token) return next(error.forbidden('No token provided'))
 
   jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
-    if (err) return next(err)
+    if (err) return next(error.forbidden('Invalid Token'))
 
     // User context is stored on res.locals so things like
     // the user id, email, etc. can be accessed on controllers
