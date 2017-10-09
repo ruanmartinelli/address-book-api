@@ -31,6 +31,7 @@ Folders look like this:
 ├── /src/                       # Source files
 │   ├── /db/                    # Database connection module
 │   ├── /util/                  # Reusable modules
+│   ├── /migration/             # Knex DB migrations
 |   ├── /script/                # SQL, bash, JS, etc.
 │   └── /app/                   # API modules (i.g. Users, Contacts)
 ├── .env                        # Env. secrets and credentials 
