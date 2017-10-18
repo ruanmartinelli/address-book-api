@@ -21,7 +21,7 @@ const ContactSchema = Joi.object({
 async function addContact (contact) {
   contact = validateSchema(contact, ContactSchema)
 
-  const contactRef = `${ref}/${contact.id}`
+  const contactRef = `${ref}/${contact.userId}/${contact.id}`
 
   await firebase
     .database()
