@@ -1,5 +1,8 @@
 # Address Book API
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ruanmartinelli/address-book-api.svg)](https://greenkeeper.io/)
+
+
 <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
 
 > An Address Book back-end API
